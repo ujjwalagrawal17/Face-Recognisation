@@ -1,0 +1,15 @@
+import pygame.camera
+import time
+pygame.camera.init()
+cam = pygame.camera.Camera(pygame.camera.list_cameras()[0])
+cam.start()
+img = cam.get_image()
+import pygame.image
+for i in range (20):
+   pygame.image.save(img, "prashant_" + str(i) +".jpg")
+   time.sleep(1)
+
+pygame.camera.quit()
+
+
+
